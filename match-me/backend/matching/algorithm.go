@@ -1,6 +1,6 @@
 package matching
 
-import "match-me/backend/models"
+import "match-me-backend/models"
 
 func GetTopMatches(userBio models.Bio, potential []models.Bio, limit int) []int {
 	var scores []struct {

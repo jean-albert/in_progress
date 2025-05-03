@@ -3,7 +3,8 @@ package utils
 import (
 	"database/sql"
 	"fmt"
-	"match-me/backend/models"
+	"match-me-backend/config"
+	"match-me-backend/models"
 )
 
 func InitDB(cfg config.Config) (*sql.DB, error) {

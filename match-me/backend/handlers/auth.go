@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"database/sql"
-	"match-me/backend/models"
-	"match-me/backend/utils"
+	"match-me-backend/models"
+	"match-me-backend/utils"
 	"net/http"
 )
 

@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"match-me/backend/matching"
+	"match-me-backend/matching"
 	"net/http"
 )
 

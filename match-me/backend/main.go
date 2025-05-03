@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"match-me/backend/config"
-	"match-me/backend/handlers"
-	"match-me/backend/utils"
+	"match-me-backend/config"
+	"match-me-backend/handlers"
+	"match-me-backend/utils"
 	"net/http"
 )
 

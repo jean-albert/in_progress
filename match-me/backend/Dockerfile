@@ -16,6 +16,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o match-me .
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/match-me .
-COPY --from=builder /app/.env .  # Make sure this exists
+COPY --from=builder /app/.env .
 EXPOSE 8080
-CMD ["./match-me"]
+CMD ["./match-me-backend"]
