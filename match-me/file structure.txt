@@ -1,0 +1,50 @@
+match-me/
+├── backend/
+│   ├── main.go                # Main application entry point
+│   ├── go.mod                 # Go module file
+│   ├── go.sum                 # Go dependencies
+│   ├── config/
+│   │   └── config.go          # Configuration setup
+│   ├── handlers/
+│   │   ├── auth.go            # Authentication handlers
+│   │   ├── chat.go            # Chat handlers
+│   │   ├── profile.go         # Profile handlers
+│   │   └── recommendations.go # Recommendation handlers
+│   ├── models/
+│   │   └── models.go          # All data models in one file
+│   ├── utils/
+│   │   ├── auth.go            # Auth utilities (JWT)
+│   │   └── database.go        # DB connection and queries
+│   └── matching/
+│       └── algorithm.go       # Matching algorithm
+│
+└── frontend/
+    ├── public/
+    │   ├── index.html         # Main HTML file
+    │   └── assets/            # Static assets (CSS, images)
+    ├── src/
+    │   ├── App.js             # Main app component
+    │   ├── App.css            # Main styles
+    │   ├── index.js           # React entry point
+    │   ├── api.js             # All API calls
+    │   ├── auth.js            # Auth context and hooks
+    │   ├── components/
+    │   │   ├── Auth/          # Auth components
+    │   │   │   ├── Login.js
+    │   │   │   └── Register.js
+    │   │   ├── Chat/          # Chat components
+    │   │   │   ├── Chat.js
+    │   │   │   └── Message.js
+    │   │   ├── Connections/   # Connection components
+    │   │   │   ├── List.js
+    │   │   │   └── Requests.js
+    │   │   ├── Profile/       # Profile components
+    │   │   │   ├── Edit.js
+    │   │   │   └── View.js
+    │   │   └── Recommendations.js # Recommendations component
+    │   └── pages/
+    │       ├── Home.js        # Main page
+    │       ├── Dashboard.js   # User dashboard
+    │       └── NotFound.js    # 404 page
+    ├── package.json          # Frontend dependencies
+    └── package-lock.json
