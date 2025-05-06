@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"match-me-backend/config"
 	"match-me-backend/models"
+
+	"github.com/lib/pq"
 )
 
 func InitDB(cfg config.Config) (*sql.DB, error) {
@@ -33,4 +35,18 @@ func GetProfile(db *sql.DB, userID int) (models.Profile, error) {
 	// Implementation for getting profile
 }
 
-// Add other database operations similarly
+func GetBio(db *sql.DB, userID int) (models.Bio, error) {
+	var bio models.Bio
+	err := db.QueryRow("SELECT user_id, interests, looking_for, age, gender, max_distance FROM bios WHERE user_id = $1", userID).Scan(
+		&bio.UserID,
+		pq.Array(&bio.Interests),
+		&bio.LookingFor,
+		&bio.Age,
+		&bio.Gender,
+		&bio.MaxDistance,
+	)
+	if err != nil {
+		return models.Bio{}, fmt.Errorf("failed to get bio: %w", err) // Explicit return
+	}
+	return bio, nil // Explicit return
+}

@@ -16,6 +16,7 @@ type Profile struct {
 }
 
 type Bio struct {
+	UserID      int      `json:"user_id"`
 	Interests   []string `json:"interests"`
 	LookingFor  string   `json:"looking_for"`
 	Age         int      `json:"age"`
